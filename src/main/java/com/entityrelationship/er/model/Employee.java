@@ -18,7 +18,7 @@ import java.util.List;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // if we dont provide strategy then new table with suffx "_seq" will be created default "GenerationType.SEQUENCE"
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  //  default "GenerationType.SEQUENCE" creates new table with suffix "_seq" will be created
     private int id;
 
     @Column(nullable = false)
