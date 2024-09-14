@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: er:v1
+  datasource:
+    url: jdbc:mysql://localhost:3306/erv1
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+      # Should be "none" by default or "validate" if tables are already created
+      # either manually or through Flyway migration and/or Liquibase
+      # to avoid conflict of tampering the table.
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true  # Optional: To show SQL queries in the logs
